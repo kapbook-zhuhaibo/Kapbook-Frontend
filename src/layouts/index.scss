@@ -1,0 +1,53 @@
+@import '@/sass/_mixin.scss';
+@import '@/sass/_common.scss';
+
+#root {
+    height: 100%;
+}
+  
+body{
+    font-size: 14px;
+    line-height: 1.5;
+    font-family: "SF Pro SC","SF Pro Display","SF Pro Icons","PingFang SC","Helvetica Neue","Helvetica","微软雅黑","Arial",sans-serif;
+    -webkit-font-smoothing: antialiased;
+    background:#f5f8f9;    
+}
+.contents {
+    padding: $page;
+    min-width:1200px;
+}
+h1,h2,h3,h4,h5 {margin:0;padding:0;}
+
+
+.fl {float:left;} 
+.fr {float:right;}
+.oh {overflow: hidden;}
+.clear {clear: both;}
+.posR {position: relative;}
+.posA {position: absolute;}
+.ml10 {margin-left: 10px;}
+.txtP {font-size: 13px; line-height: 24px; margin: 0; color: #9b9b9b;}
+
+/* antd 基础表格 */
+.shadow {box-shadow: 2px 2px 10px -2px #e4e4e4; }
+.ant-table-tbody > tr > td {padding: 13px 16px; }
+.ant-table-thead > tr > th { background: #ebeef1; color: #888; font-size: 12px; font-weight: 400;padding: 11px 16px; }
+.ant-table-tbody > tr > td {border-bottom: 1px solid #eee;text-align: left;color: #555555;font-size: 12px;height: 48px; }
+
+
+// antd reset
+.ant-select {font-size:$tableSize}
+.ant-input {border: 1px solid #dce2ee;font-size:$tableSize}
+.ant-form-item-label>label { color: #555; }
+.ant-form-text { font-size: 12px; color: #9b9b9b; }
+.ant-form-explain {font-size:$smallSize }
+.ant-btn, .ant-dropdown-menu-item {font-size:13px;}
+.ant-tooltip{font-size:12px;}
+.ant-tooltip-inner {background-color: #606ca0;}
+.ant-tooltip-arrow::before {background-color: #606ca0;}
+.ant-descriptions-item-label {color:#555;min-width: 80px;text-align: right;}
+.ant-descriptions-item-content {color:#888}
+.ant-modal-header {padding: 12px 24px;}
+.ant-modal-title {margin: 0;color: #333;font-weight: 400;font-size: 14px;line-height: 22px;word-wrap: break-word;}
+.ant-modal-close-x {height: 47px;line-height: 47px;}
+.ant-input, .ant-input-number, .ant-select-selection {border: 1px solid #dce2ee;}

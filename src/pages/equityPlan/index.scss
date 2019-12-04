@@ -1,0 +1,114 @@
+@import '@/sass/_mixin.scss';
+@import '@/sass/_common.scss';
+
+
+.detailsRedioMenus{
+    @include bottom(10px);
+    height:32px;
+    .ant-spin-nested-loading > div > .ant-spin .ant-spin-dot{
+        left: 30px;
+    }
+}
+.planConentDiv {
+    @include padding(20px);
+    background: #fff;
+    border-radius: 3px;
+    position: relative;
+    box-shadow: 2px 2px 10px -2px #e4e4e4;
+    min-height: 75vh;
+}
+.planDetails {
+    .ptb10 {padding:10px 0 10px 0;}
+    .detailsMan {
+        padding-bottom: 106px;
+        width: 1060px;
+        margin: 0 auto;
+    }
+    .editIcon {
+        width: 20px;
+        height: 20px;
+        background: url('@/assets/images/planDetails/infoEditIcon.png') no-repeat 3px 3px;
+        background-size: 40px;
+        cursor: pointer;
+        margin-left: 3px;
+    }
+    .detailsFooter{
+        background: #fff;
+        overflow: hidden;
+        padding-bottom: 20px;
+        position: absolute;
+        width: calc(100% - 40px);
+        bottom: 0;
+        .btnDiv {
+            width: 230px;
+            margin: 0 auto;
+            text-align: center;
+            button:first-child {
+                @include right(20px);
+            }
+        }
+    }
+    h4 {
+        i {
+            font-size: 12px;
+            color: #9b9b9b;
+            font-style: normal;
+            font-weight: 400;
+        }
+    }
+    .detailsInfoTable {
+        .ant-btn-round.ant-btn-sm {font-size:12px;}
+        .ant-upload-list-item-name {font-size: 12px;line-height: 24px;padding-left:18px;}
+        .ant-upload-list-item-card-actions {top:2px;}
+        .ant-upload-list-item-info {padding: 0 12px 0 0px; height: 24px;}
+        margin: 20px 30px;
+        p {
+            color: #9b9b9b;
+            font-size: 12px;
+            margin: 0;
+            line-height:28px;
+        }
+        .ml30 {margin-left:30px;}
+        table {
+            width:100%;
+            border-bottom:1px solid $solid;
+            border-left:1px solid $solid;
+        }
+        tr {
+            border-top:1px solid $solid;
+            td {
+                border-right:1px solid $solid;
+                padding-left:30px;
+                padding-right:30px;
+            }
+            td:first-child {
+                text-align: right;
+                padding-right:30px;
+                width:210px;
+                height:51px;
+            }
+        }
+        
+    }
+
+    .fileDowDiv{
+        position: absolute;
+        left: 80px;
+        top: 3px;
+        font-size: 13px;
+    }
+}
+.EquityPool {
+    background: #fff;
+    border-radius: 3px;
+    position: relative;
+    h2 {
+        color:#1b1b1b;
+        font-size:14px;
+        margin-bottom: .5em;
+    }
+    .ant-typography.ant-typography-secondary {
+        font-size:12px;
+        color:#9b9b9b;
+    }
+}

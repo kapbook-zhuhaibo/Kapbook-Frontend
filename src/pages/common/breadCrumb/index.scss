@@ -1,0 +1,151 @@
+@import '@/sass/_mixin.scss';
+@import '@/sass/_common.scss';
+
+.breadCrumbDiv {
+    @include bottom(10px);
+    @include page;
+    height: 50px;
+    line-height: 50px;
+    font-size: 16px;
+    background: #fff;
+    box-shadow: 0px -1px 8px 0px rgba(21, 21, 21, 0.15);
+    min-width: 1200px;
+
+    .downIconPlan {
+        background: url('@/assets/images/breadCrumb/menusRightIcon.png') no-repeat 0px 20px;
+        width:20px;height:50px;
+        float:left;
+        background-size: 6px;
+        margin-left: 20px;
+    }
+    .navStyle{
+        position: relative;
+        cursor: pointer;
+        float: left;
+        padding: 0px 13px 0px 0px;
+        height: 50px;
+        line-height: 50px;
+        margin-left: 10px;
+        color: #555;
+        .navTitle{
+            margin-left: 5px;
+            margin-right: 10px;
+            font-size:14px;
+        }
+        .nav_company_ico {
+            background-image: url('@/assets/images/breadCrumb/_nav_user_ico.png');
+            background-size: 40px;
+            width: 20px;
+            height: 20px;
+            margin-top: 15px;
+        }
+        .lnav1{
+            background-image: url('@/assets/images/breadCrumb/_nav_user_ico2.png');
+            background-size: 40px 17px;
+            margin-top: 16px;
+            height: 17px;
+            width: 20px;
+        }
+        .downIcon {
+            top: 23px;
+            right: 8px;
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-width: 5px 5px 0;
+            border-style: solid;
+            border-color: #c5c5c5 transparent transparent;
+        }
+        &:hover{
+            .navTitle{
+                color: #3ba5f1;
+            }
+            .nav_company_ico {
+                background-position-x: -20px;
+            }
+            .lnav1{
+                background-position-x: -20px;
+            }
+            .showMenus {
+                display: block;
+            }
+        }
+        div.showMenus {
+            max-width:300px;
+            display: none;
+            background: #fff;
+            box-shadow: 0px 0px 4px 2px rgba(0,0,0,.1);
+            border-radius: 3px;
+            padding: 13px 0px;
+            font-size: 14px;
+            text-align: left;
+            position: absolute;
+            top: 50px;
+            left: 0px;
+            z-index: 100;
+            min-width: 130px;
+            max-height: 300px;
+            overflow-y: auto;
+            p {
+                cursor: pointer;
+                position: relative;
+                height: 27px;
+                line-height: 27px;
+                padding: 0 10px 0 10px;
+                color: #9b9b9b;
+                transition: background ease-in-out .2s;
+                letter-spacing: 1px;
+                margin-bottom: 0;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                .childIcon {
+                    opacity: 0;
+                    background: url('@/assets/images/breadCrumb/childrenIcon.png') no-repeat -19px 0px;
+                    width: 18px;
+                    height: 18px;
+                    background-size: 35px;
+                    border-radius: 0;
+                    position: absolute;
+                    left: 10px;
+                    top: 5px;
+                    display: inline-block;
+                }
+                &:hover {
+                    color:#1b1b1b;
+                    background: #eaf8fe;
+                    .childIcon{background-position: -19px 0px;opacity: 1;}
+                    .childrenIconDashboard {background-position: -18px -24px;}
+                    .childrenIconEquityAssign {background-position: -18px -45px;}
+                    .childrenIconReport {background-position: -18px -68px;}
+                }
+
+            }
+            p.active{
+                color:#1b1b1b;
+                background: #eaf8fe;
+                .childIcon{
+                    opacity: 1;
+                    background-position: 0px 0px;
+                }
+            }
+            p.active_m {
+                color:#3ba5f1;
+                background: #eaf8fe;
+                .childIcon{
+                    opacity: 1;
+                    background-position: 0px 0px;
+                }
+            }
+        }
+    }
+    .navStyle.noHover{
+        cursor: default;
+        .navTitle{
+            color: #555;
+            cursor: default;
+        }
+    }
+    .ant-spin-dot-spin {float:left;}
+    .ant-spin.ant-spin-show-text .ant-spin-text {float:left;margin-left:10px;}
+}

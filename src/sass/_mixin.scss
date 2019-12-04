@@ -1,0 +1,17 @@
+// Mixin
+@mixin page( $num: 30px ) { padding:0 $num; }
+// margin
+@mixin margin( $num: 0px 0px 0px 0px ) { margin: $num; }
+@mixin top( $num: 10px ) { margin-top: $num; }
+@mixin bottom( $num: 10px ) { margin-bottom: $num; }
+@mixin right( $num: 10px ) { margin-right: $num; }
+@mixin left( $num: 10px ) { margin-left: $num; }
+// padding
+@mixin padding( $num: 0px 0px 0px 0px ) { padding: $num; }
+@mixin p-top( $num: 0px ) { padding-top: $num; }
+@mixin p-right( $num: 0px ) { padding-right: $num; }
+@mixin p-bottom( $num: 0px ) { padding-bottom: $num; }
+@mixin p-left( $num: 0px ) { padding-left: $num; }
+
+// text-align
+@mixin tx-al( $dire ) { text-align: $dire; }

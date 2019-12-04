@@ -1,0 +1,36 @@
+@import '@/sass/_mixin.scss';
+@import '@/sass/_common.scss';
+
+.addPropelBtn {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    cursor: pointer;
+    color: $lan;
+    font-size: $smallSize;
+    @include tx-al(center);
+    @include bottom(0px);
+    @include padding(8px 8px);
+    border-top:1px solid $solid;
+    background: #fff;
+    &:hover {
+        background: #f7f7f7;
+    }
+}
+.peopelEmailInfo{
+    @include left(10px);
+    @include tx-al(center);
+    float: right;
+    color:#9b9b9b;
+}
+.selectPeopelDiv {
+    .ant-select-dropdown-menu{
+        @include bottom(35px);
+    }
+    .ant-select-dropdown-menu-item-selected {
+        background: #f0fbff;
+    }
+}
+.ant-select-selection {
+    .peopelEmailInfo {display: none;}
+}

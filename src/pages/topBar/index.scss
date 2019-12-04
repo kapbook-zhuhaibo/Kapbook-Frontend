@@ -1,0 +1,304 @@
+@import '@/sass/_mixin.scss';
+@import '@/sass/_common.scss';
+
+.topBar{
+    height: 53px;
+    padding: $page;
+    min-width: $minWidth;
+    z-index: 1;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.1);
+    position: relative;
+    background: -webkit-linear-gradient(50deg,#507ec3,#20a9e8);
+    background: -webkit-linear-gradient(40deg,#507ec3,#20a9e8);
+    background: linear-gradient(50deg,#507ec3,#20a9e8);
+    .logo {
+        float:left;
+        @include top(15px);
+        @include right(40px);
+        cursor: pointer;
+        height: 24px;
+        width: 120px;
+    }
+    .companyDiv {
+        cursor: pointer;
+        &:hover {
+            .companyTitle {
+                color: #e2edfa;
+                -webkit-transition: background .2s ease-in-out;
+                transition: background .2s ease-in-out;
+            }
+        }
+    }
+    .companyTitle{
+        float:left;
+        @include p-left(19px);
+        @include top(13px);
+        font-size: 16px;
+        border-left: 1px solid #6a9bc7;
+        color: #fff;
+        line-height: 24px;
+        font-weight: 700;
+        max-width: 350px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        -webkit-transition: background .2s ease-in-out;
+        transition: background .2s ease-in-out;
+    }
+    .companyChangeIco {
+        background: url('@/assets/images/topBar/compIco.png') no-repeat 0 0;
+        width: 22px;
+        height: 22px;
+        background-size: 100%;
+        float:left;
+        @include margin(14px 0 0 3px);
+    }
+    .badgePadding {
+        float:left;
+        @include top(20px);
+        @include p-right(20px);
+        cursor: pointer;
+        border-right: 1px solid #b8dcf3;
+        .badge {
+            background: url('@/assets/images/topBar/messageIcon.png') no-repeat 0 0;
+            background-size: 32px;
+            width: 16px;
+            height: 17px;
+            position: relative;
+            &:hover {
+                background-position-x: -16px;
+                .badgeIco {
+                  background: #e55a51;
+                }
+            }
+        }
+        .badgeIco {
+            background: #c23f38;
+            color: #fff;
+            font-size: $smallSize;
+            width: 16px;
+            height: 16px;
+            line-height: 16px;
+            @include tx-al(center);
+            border-radius: 10px;
+            text-indent: 1px;
+            position: absolute;
+            top: -6px;
+            right: -8px;
+        }
+    }
+
+    .dropSupport {
+        float:left;
+        @include padding(0 18px 15px 3px);
+        @include margin(17px 17px 0 17px);
+        cursor: pointer;
+        font-size: $size;
+        color: #c9def8;
+        &:hover {
+            color: #fff;
+            .downIcon {
+                border-color: #fff transparent transparent;
+            }
+        }
+        position: relative;
+        .downIcon {
+            top:8px;
+            right:0;
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-width: 5px 5px 0;
+            border-style: solid;
+            border-color: #c9def8 transparent transparent;
+        }
+        ul {
+            position: absolute;
+            @include padding(15px 15px 5px 15px);
+            list-style-type: none;
+            background: rgba(66,100,165,.95);
+            border-radius: 4px;
+            z-index: 100;
+            right: -11px;
+            top: 26px;
+            width:95px;
+            li {
+                @include bottom;
+                color: #b2c9e5;
+                &:hover {
+                    color: #fff;
+                    .feedbackBtn{
+                        background-position: 15px 15px;
+                    }
+                    .helpBtn {
+                        background-position: 15px 0px;
+                    }
+                }
+                .helpIcon{
+                    background-image: url('@/assets/images/topBar/helpIcon.png');
+                    background-size: 30px;
+                    width: 15px;
+                    height: 15px;
+                    margin-right: 7px;
+                    float:left;
+                    margin-top: 3px;
+                }
+                .helpIcon1{
+                    background-image: url('@/assets/images/topBar/support.png');
+                    background-size: 30px;
+                    width: 15px;
+                    height: 15px;
+                    margin-right: 7px;
+                    margin-top: 3px;
+                    float:left;
+                }
+                .feedbackBtn {
+                    background-position: 0px 15px;
+                }
+            }
+            .barNavdivdownIcon{
+                width: 0;
+                height: 0;
+                border-width: 0 7px 7px;
+                border-style: solid;
+                border-color: transparent transparent rgba(66,100,165,.9);
+                position: absolute;
+                top: -6px;
+                right: 8px;
+            }
+        }
+    }
+    .dropUserDiv {
+        @include left(0px);
+        @include right(0px);
+        @include p-left(0px);
+        @include p-right(0px);
+    }
+    .dropUsersDiv {
+        float:left;
+        position: relative;
+        height: 21px;
+        min-width:162px;
+        border-left: 1px solid #b8dcf3;
+        .dropUsers{
+            float:left;
+            @include p-bottom(10px);
+            @include p-right(20px);
+            min-width: 90px;
+            height:37px;
+        }
+        &:hover {
+            color: #fff;
+        }
+        .userImgDiv {
+            position: relative;
+            float: left;
+            margin-top: -8px;
+        }
+        img {
+            width:35px;
+            height: 35px;
+            @include margin(0px 11px 0 15px);
+            border-radius: 20px;
+        }
+        ul{
+            width: 120px;
+        }
+        .topbarUserIcon {
+            background:url("@/assets/images/topBar/user_list_nav.png") no-repeat;
+            background-size: 16px;
+        }
+        li:hover {
+            .userinfoBtn{
+                background-position: 0px -20px;
+            }
+            .topbarmymoneyIcon {
+                background-position: 0px -60px;
+            }
+            .topbaroutIcon {
+                background-position: 0px -100px;
+            }
+        }
+        .userinfoBtn {
+            width: 16px;
+            height: 18px;
+            display: inline-block;
+            float:left;
+            @include right(5px);
+        }
+        .topbarmymoneyIcon {
+            width: 16px;
+            height: 18px;
+            display: inline-block;
+            float:left;
+            @include right(5px);
+            background-position: 0px -40px;
+        }
+        .topbaroutIcon {
+            width: 16px;
+            height: 18px;
+            display: inline-block;
+            float:left;
+            @include right(5px);
+            background-position: 0px -80px;
+        }
+    }
+
+    .customSer {
+        position: fixed;
+        right:30px;
+        bottom:0px;
+        border: 1px solid #ededed;
+    }
+    .whitedelico {
+        position: absolute;
+        color: #000;
+        right: -15px;
+        top: 0;
+    }
+}
+.company_list{
+    height:450px;
+    overflow-y:scroll;
+    ul {
+        margin:0;
+        padding:0;
+        li {
+            float:left;
+            @include bottom(15px);
+            @include right(15px);
+            list-style-type: none;
+            text-align: left;
+            color: #1b1b1b;
+            cursor: pointer;
+            position: relative;
+            line-height: 40px;
+            width: 250px;
+            background: #f5f6f7;
+            border: 1px solid #f5f6f7;
+            border-radius: 3px;
+            padding: 15px 0 15px 15px;
+            &:hover{
+                border: 1px solid #129fdd;
+            }
+        }
+    }
+    dt{
+        float:left;
+        width: 40px;
+        height: 40px;
+        overflow: hidden;
+    }
+    dd{
+        float:left;
+        @include left(10px);
+        height: 40px;
+        line-height: 40px;
+        h3 {
+            width:165px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+    }
+}
